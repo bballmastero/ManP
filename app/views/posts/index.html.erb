@@ -1,0 +1,25 @@
+<% if current_user %>
+    <div id="createPost" class="panel right">
+        <h1>Do something manly?</h1>
+        <p>
+            <%= form_for @post do |f| %>
+                <%= f.text_area :content, class: 'manText' %>
+                <%= f.submit "Click" %>
+            <% end %>
+        </p>
+    </div>
+<% end %>
+<div class="panel left">
+    <h1>Manly Events</h1>
+    <% @posts.each do |post| %>
+        <div class="manWrapper">
+            <a href="<%= user_path post.user %>">
+                <img class="avatar" src="<%= post.user.avatar_url %>">
+                <span class="name"><%= post.user.name %></span>
+            </a>
+            @<%= post.user.username %>
+            <span class="time"><%= time_ago_in_words(post.created_at) %></span>
+            <p> <%= post.content %> </p>
+        </div>
+    <% end %>
+</div>
