@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
+
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -47,3 +47,12 @@ end
 gem "railties", ">= 0"
 
 gem "omniauth-facebook"
+
+
+# Use postgresql as the database for Active Record
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
+
+gem ruby "2.0.0"

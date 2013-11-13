@@ -14,7 +14,7 @@
     <% @posts.each do |post| %>
         <div class="manWrapper">
             <a href="<%= user_path post.user %>">
-                <img class="avatar" src="<%= post.user.avatar_url %>">
+       #         <img class="avatar" src="<%= post.user.avatar_url %>">
                 <span class="name"><%= post.user.name %></span>
             </a>
             @<%= post.user.username %>
@@ -23,3 +23,4 @@
         </div>
     <% end %>
 </div>
+
