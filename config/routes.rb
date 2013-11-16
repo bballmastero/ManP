@@ -22,6 +22,7 @@ ManP::Application.routes.draw do
   #   resources :products
 
    resources :users
+
   root to: 'users#new'
     get 'manfriends', to: 'users#manfriends', as: 'manfriends'
   get 'sessions/new'
