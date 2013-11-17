@@ -47,7 +47,6 @@ test:
   encoding: unicode
   database: ManP_test
   pool: 5
-  username: ManP
   password:
 
 production:
@@ -55,5 +54,4 @@ production:
   encoding: unicode
   database: ManP_production
   pool: 5
-  username: ManP
   password:
