@@ -42,7 +42,11 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+group :development, :test do
+gem 'debugger',
+gem 'rspec-rails',  '~> 2.13.1'
+end
+
 
 gem 'railties', '>= 0'
 
